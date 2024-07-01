@@ -736,6 +736,10 @@ PrefabInstance:
       propertyPath: Spawner
       value: 
       objectReference: {fileID: 2098429732}
+    - target: {fileID: 2287774791265997227, guid: ce3bd41c2567140468ff55a9dbf693ae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2921389744433600415, guid: ce3bd41c2567140468ff55a9dbf693ae, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -744,6 +748,18 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1273309334}
+    - target: {fileID: 5164180458780596046, guid: ce3bd41c2567140468ff55a9dbf693ae, type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5164180458780596046, guid: ce3bd41c2567140468ff55a9dbf693ae, type: 3}
+      propertyPath: m_MinValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6657525713352018901, guid: ce3bd41c2567140468ff55a9dbf693ae, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6657525713352018901, guid: ce3bd41c2567140468ff55a9dbf693ae, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
