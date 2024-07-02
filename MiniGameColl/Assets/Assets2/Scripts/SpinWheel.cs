@@ -9,7 +9,7 @@ public class SpinWheel : MonoBehaviour
 	public List<int> prize;
 	public List<AnimationCurve> animationCurves;
 	
-	public bool spinning;	
+	private bool spinning;	
 	private float anglePerItem;	
 	private int randomTime;
 	private int itemNumber;
