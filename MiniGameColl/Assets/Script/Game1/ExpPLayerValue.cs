@@ -23,8 +23,8 @@ public class ExpPLayerValue : MonoBehaviour
     public void AddExpValue(float value)
     {
         ExpPLayer += value;
-        UpdateValueSlader();
         PlayerPrefs.SetFloat("exp", ExpPLayer);
+        UpdateValueSlader();
         if (ExpPLayer >= 10)
         {
             ExpPLayer = 0;

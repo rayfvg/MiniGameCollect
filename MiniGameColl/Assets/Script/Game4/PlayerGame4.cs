@@ -14,6 +14,9 @@ public class PlayerGame4 : MonoBehaviour
     public bool check = false;
 
     public GameObject Player;
+    public Timer Timer;
+
+    public ExpPLayerValue PlayerExp;
 
     private void Update()
     {
@@ -26,22 +29,20 @@ public class PlayerGame4 : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "goal")
+        if (collision.gameObject.GetComponent<EnemyMoverGame4>())
         {
-            print("take");
-            check = false;
-
-            target1.SetActive(false);
-            target1.transform.position = new Vector3(transform.position.x, target1.transform.position.y, transform.position.z);
-            target2.SetActive(true);
-            target2.transform.position = new Vector3(transform.position.x, Random.Range(-2f, 2f), transform.position.z);
+            Timer.GameOver();
+        }
+        else if (collision.gameObject.GetComponent<FruintMoverGame4>())
+        {
+            PlayerExp.AddExpValue(0.7f);
+            Destroy(collision.gameObject.GetComponent<FruintMoverGame4>());
         }
     }
 
     public void change()
     {
         check = !check;
-        print("tap");
     }
 
    
