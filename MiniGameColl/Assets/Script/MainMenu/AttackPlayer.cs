@@ -7,12 +7,14 @@ public class AttackPlayer : MonoBehaviour
     public Enemy[] enemies;
     private int _index;
 
-    
+    public int[] LevelsEnemy;
+
+
     private int LevelPlayer;
 
     public TMP_Text textlvl;
 
-    
+
 
 
     private void Start()
@@ -24,13 +26,20 @@ public class AttackPlayer : MonoBehaviour
 
     public void TryAttackEnemy()
     {
-            transform.position =  enemies[_index].transform.position;
+        if (LevelPlayer >= LevelsEnemy[_index])
+        {
+            transform.position = enemies[_index].transform.position;
             enemies[_index].gameObject.SetActive(false);
-        _index++; 
+            _index++;
+        }
+        else
+        {
+            print("Ќе достаточный уровень, нужно еще  " + (LevelsEnemy[_index] - LevelPlayer) + " уровней");
+        }
     }
 
-   
- 
 
-   
+
+
+
 }

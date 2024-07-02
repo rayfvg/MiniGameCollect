@@ -43,4 +43,28 @@ public class MoveBetweenPoints : MonoBehaviour
         // Плавное перемещение к целевой точке
         transform.position = Vector3.MoveTowards(transform.position, targetPoint.position, moveSpeed * Time.deltaTime);
     }
+
+    public void MoveRight()
+    {
+        if (targetPoint == centerPoint)
+        {
+            targetPoint = rightPoint;
+        }
+        else if (targetPoint == leftPoint)
+        {
+            targetPoint = centerPoint;
+        }
+    }
+
+    public void MoveLeft()
+    {
+        if (targetPoint == centerPoint)
+        {
+            targetPoint = leftPoint;
+        }
+        else if (targetPoint == rightPoint)
+        {
+            targetPoint = centerPoint;
+        }
+    }
 }

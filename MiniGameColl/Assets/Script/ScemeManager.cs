@@ -7,4 +7,8 @@ public class ScemeManager : MonoBehaviour
     {
         SceneManager.LoadScene(id);
     }
+    public void ResetAllSave()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 }

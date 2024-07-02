@@ -23,7 +23,7 @@ public class PlayerGame4 : MonoBehaviour
         if (check) transform.position = Vector3.MoveTowards(transform.position, target1.transform.position, Speed * Time.deltaTime);
         if (!check) transform.position = Vector3.MoveTowards(transform.position, target2.transform.position, Speed * Time.deltaTime);
 
-        transform.rotation *= Quaternion.Euler(0, 0, 1.9f);
+        transform.rotation *= Quaternion.Euler(0, 0, RotationSpeed);
 
       
     }
