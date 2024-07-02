@@ -1,94 +1,63 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections.Generic;
-using System.Collections;
 
 public class WheelOfFortune : MonoBehaviour
 {
-    public Transform wheel; // Колесо (объект с ячейками)
-    public float spinDuration = 5f; // Длительность вращения
-    public float maxSpinSpeed = 500f; // Максимальная скорость вращения
-
+    public float minSpinSpeed = 300f; // Минимальная скорость вращения
+    public float maxSpinSpeed = 600f; // Максимальная скорость вращения
+    public float minSpinDuration = 3f; // Минимальная длительность вращения
+    public float maxSpinDuration = 6f; // Максимальная длительность вращения
+    private float spinDuration; // Текущая длительность вращения
+    private float spinSpeed; // Текущая скорость вращения
     private bool isSpinning = false;
-    private List<int> segmentIndexes = new List<int>(); // Список для хранения индексов сегментов
+    private int numberOfSegments = 12;
 
-    void Start()
+    private void Awake()
     {
-        InitializeSegments();
+        ResetWheel();
     }
-
-    void InitializeSegments()
-    {
-        // Заполняем список индексами сегментов
-        for (int i = 0; i < 5; i++) // Здесь 5 - количество сегментов
-        {
-            segmentIndexes.Add(i);
-        }
-
-        // Перемешиваем индексы, чтобы значения были случайными
-        ShuffleList(segmentIndexes);
-    }
-
-    void ShuffleList(List<int> list)
-    {
-        // Простой алгоритм тасования Фишера-Йейтса
-        for (int i = list.Count - 1; i > 0; i--)
-        {
-            int j = Random.Range(0, i + 1);
-            int temp = list[i];
-            list[i] = list[j];
-            list[j] = temp;
-        }
-    }
+  
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isSpinning) // Нажатие пробела запускает вращение
+        if (isSpinning)
         {
-            StartCoroutine(SpinTheWheel());
+            spinDuration -= Time.deltaTime;
+            if (spinDuration <= 0)
+            {
+                isSpinning = false;
+                float finalAngle = transform.eulerAngles.z % 360;
+                int segment = Mathf.FloorToInt(finalAngle / (360 / numberOfSegments));
+                LoadScene(segment);
+            }
+            else
+            {
+                transform.Rotate(0, 0, spinSpeed * Time.deltaTime);
+            }
         }
     }
 
-    IEnumerator SpinTheWheel()
+    public void SpinWheel()
     {
-        isSpinning = true;
-        float elapsedTime = 0f;
-        float currentSpeed = maxSpinSpeed;
-
-        while (elapsedTime < spinDuration)
+        if (!isSpinning)
         {
-            wheel.Rotate(Vector3.forward, currentSpeed * Time.deltaTime);
-            elapsedTime += Time.deltaTime;
-            currentSpeed = Mathf.Lerp(maxSpinSpeed, 0, elapsedTime / spinDuration);
-            yield return null;
+            spinSpeed = Random.Range(minSpinSpeed, maxSpinSpeed);
+            spinDuration = Random.Range(minSpinDuration, maxSpinDuration);
+            isSpinning = true;
         }
+    }
 
+    private void LoadScene(int segment)
+    {
+        int sceneIndex = (segment + 1) % numberOfSegments;
+        SceneManager.LoadScene(sceneIndex);
+    }
+
+    private void ResetWheel()
+    {
+        spinDuration = 0;
+        spinSpeed = 0;
         isSpinning = false;
-        SnapToClosestSegment();
-        LoadSceneBasedOnSegment();
-    }
-
-    void SnapToClosestSegment()
-    {
-        float segmentAngle = 360f / segmentIndexes.Count; // Угол для каждой ячейки
-        float currentAngle = wheel.eulerAngles.z;
-        float closestAngle = Mathf.Round(currentAngle / segmentAngle) * segmentAngle;
-
-        wheel.eulerAngles = new Vector3(0, 0, closestAngle);
-    }
-
-    void LoadSceneBasedOnSegment()
-    {
-        float segmentAngle = 360f / segmentIndexes.Count;
-        float currentAngle = wheel.eulerAngles.z;
-        int segmentIndex = Mathf.RoundToInt(currentAngle / segmentAngle) % segmentIndexes.Count;
-
-        int finalIndex = segmentIndexes[segmentIndex];
-        string sceneToLoad = "Scene" + (finalIndex + 1); // Имя сцены должно соответствовать вашим сценам
-
-        SceneManager.LoadScene(sceneToLoad);
+        transform.rotation = Quaternion.identity; // Сброс вращения колеса
     }
 }
-
-
-
