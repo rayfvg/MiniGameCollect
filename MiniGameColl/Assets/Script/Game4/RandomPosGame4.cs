@@ -13,8 +13,8 @@ public class RandomPosGame4 : MonoBehaviour
 
     public void RandomPosTap()
     {
-        pos1.transform.position = new Vector3(5.1f, Random.Range(2f, -2f), 0);
-        pos2.transform.position = new Vector3(-5.09f, Random.Range(2f, -2f), 0);  
+        pos1.transform.position = new Vector3(6.4f, Random.Range(2f, -2f), 0);
+        pos2.transform.position = new Vector3(-5.83f, Random.Range(2f, -2f), 0);  
     }
 
    

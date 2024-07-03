@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2047170105724350314}
   - component: {fileID: -1078157649419636116}
   - component: {fileID: 93351692329012911}
+  - component: {fileID: 3683608977318018083}
   m_Layer: 0
   m_Name: fruitGame3
   m_TagString: Untagged
@@ -29,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 6311617950498437548}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6998, y: 0.5972, z: 0}
-  m_LocalScale: {x: 0.5731, y: 0.878, z: 1}
+  m_LocalPosition: {x: -1.8009, y: 0.4947, z: 0}
+  m_LocalScale: {x: 0.9093945, y: 0.83015794, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.265352, g: 0.9056604, b: 0, a: 1}
+  m_Sprite: {fileID: -1337796959, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -171,3 +172,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f213438ce716b3458f70e7e90b7a1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3683608977318018083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6311617950498437548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90301197b0a927d43b2d8527394555d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 5812148123991874316}
+  sprites:
+  - {fileID: 1847463989, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -1347541644, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 793172594, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 1987916976, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -1586687842, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -1251093787, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 828239227, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -462256797, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 1366144071, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 1218446674, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 1914382107, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 519684443, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 986310495, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -1337796959, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -1595615294, guid: a03c2610221b14940b818fb271b448fa, type: 3}

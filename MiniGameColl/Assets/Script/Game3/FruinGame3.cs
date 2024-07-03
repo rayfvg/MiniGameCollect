@@ -4,6 +4,9 @@ public class FruinGame3 : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        if (collision.gameObject.GetComponent<DestroerFruit>() || collision.gameObject.GetComponent<ExpPLayerValue>())
+        {
+            Destroy(gameObject);
+        }
     }
 }
