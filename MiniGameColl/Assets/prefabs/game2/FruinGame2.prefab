@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5113387595505707354}
   - component: {fileID: 4452126435161600358}
   - component: {fileID: 1226715246522172665}
+  - component: {fileID: 7896092903859558075}
   m_Layer: 0
   m_Name: FruinGame2
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.1332, y: 0.3677, z: 0}
-  m_LocalScale: {x: 0.8122, y: 0.5931, z: 1}
+  m_LocalScale: {x: 1.4504814, y: 1.2159383, z: 1.799}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.39170927, g: 0.98490566, b: 0, a: 1}
+  m_Sprite: {fileID: -1595615294, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -143,3 +144,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7896092903859558075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4165653429998349202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90301197b0a927d43b2d8527394555d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 5113387595505707354}
+  sprites:
+  - {fileID: 1847463989, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -1347541644, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 793172594, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 1987916976, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -1586687842, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -1251093787, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 828239227, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -462256797, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 1366144071, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 1218446674, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 1914382107, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 519684443, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 986310495, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -1337796959, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -1595615294, guid: a03c2610221b14940b818fb271b448fa, type: 3}

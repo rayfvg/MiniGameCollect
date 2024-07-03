@@ -7,6 +7,8 @@ public class FrogController : MonoBehaviour
 
     private Camera mainCamera;
 
+    public Tongue jump;
+
     void Start()
     {
         mainCamera = Camera.main;
@@ -14,18 +16,21 @@ public class FrogController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if(jump.Stay.GetComponent<SpriteRenderer>().enabled == true) 
         {
-            // Получаем позицию клика на экране
-            Vector3 clickPosition = Input.mousePosition;
-            clickPosition.z = mainCamera.nearClipPlane;
+            if (Input.GetMouseButtonDown(0))
+            {
+                // Получаем позицию клика на экране
+                Vector3 clickPosition = Input.mousePosition;
+                clickPosition.z = mainCamera.nearClipPlane;
 
-            // Конвертируем позицию клика в мировые координаты
-            Vector3 worldPosition = mainCamera.ScreenToWorldPoint(clickPosition);
+                // Конвертируем позицию клика в мировые координаты
+                Vector3 worldPosition = mainCamera.ScreenToWorldPoint(clickPosition);
 
-            // Создаем язык и направляем его к позиции клика
-            GameObject tongue = Instantiate(tonguePrefab, transform.position, Quaternion.identity);
-            tongue.GetComponent<Tongue>().Initialize(worldPosition, tongueSpeed);
+                // Создаем язык и направляем его к позиции клика
+                GameObject tongue = Instantiate(tonguePrefab, transform.position, Quaternion.identity);
+                tongue.GetComponent<Tongue>().Initialize(worldPosition, tongueSpeed);
+            }
         }
     }
 }

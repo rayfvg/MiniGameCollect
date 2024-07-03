@@ -5,11 +5,11 @@ public class WheelOfFortune : MonoBehaviour
 {
     public float minSpinSpeed = 300f; // Минимальная скорость вращения
     public float maxSpinSpeed = 600f; // Максимальная скорость вращения
-    public float minSpinDuration = 3f; // Минимальная длительность вращения
-    public float maxSpinDuration = 6f; // Максимальная длительность вращения
+    public float minSpinDuration = 1f; // Минимальная длительность вращения
+    public float maxSpinDuration = 3f; // Максимальная длительность вращения
     private float spinDuration; // Текущая длительность вращения
     private float spinSpeed; // Текущая скорость вращения
-    private bool isSpinning = false;
+    public bool isSpinning = false;
     private int numberOfSegments = 12;
 
     private void Awake()

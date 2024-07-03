@@ -16,12 +16,16 @@ public class SpinWheel : MonoBehaviour
 	
 	void Start(){
 		spinning = false;
-		anglePerItem = 360/prize.Count;		
-	}
+		anglePerItem = 360/prize.Count;
+
+		
+
+    }
 	
-	void  Update ()
+	public void SpinnWhell()
 	{
-		if (Input.GetKeyDown (KeyCode.Space) && !spinning) {
+		if (!spinning) 
+		{
 		
 			randomTime = Random.Range (1, 2);
 			itemNumber = Random.Range (0, prize.Count);

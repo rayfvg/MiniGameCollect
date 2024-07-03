@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7944112590383860865}
   - component: {fileID: -7809760760258692245}
   - component: {fileID: -3019073232325024863}
+  - component: {fileID: 1634522286992653041}
   m_Layer: 0
   m_Name: Fruit
   m_TagString: Untagged
@@ -28,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 5045707573028004869}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.04, y: -0.02, z: -5.060652}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 6.72, y: -1.37, z: -5.060652}
+  m_LocalScale: {x: 1.4596, y: 1.4596, z: 1.4596}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.6792453, g: 0.08009967, b: 0.08009967, a: 1}
+  m_Sprite: {fileID: 1366144071, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -143,3 +144,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eb9e8462e1d3414fbab137679cf2285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1634522286992653041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5045707573028004869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90301197b0a927d43b2d8527394555d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 7944112590383860865}
+  sprites:
+  - {fileID: 1847463989, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -1347541644, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 793172594, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 1987916976, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -1586687842, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -1251093787, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 828239227, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -462256797, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 1366144071, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 1218446674, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 1914382107, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 519684443, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: 986310495, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -1337796959, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - {fileID: -1595615294, guid: a03c2610221b14940b818fb271b448fa, type: 3}
