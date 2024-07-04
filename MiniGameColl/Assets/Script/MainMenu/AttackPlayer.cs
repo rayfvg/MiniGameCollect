@@ -11,7 +11,6 @@ public class AttackPlayer : MonoBehaviour
 
 
     private int LevelPlayer;
-
     public TMP_Text textlvl;
 
 
