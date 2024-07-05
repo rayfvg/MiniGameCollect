@@ -13,6 +13,9 @@ public class Timer : MonoBehaviour
 
     public GameObject Player;
     public GameObject Spawner;
+
+    public AudioSource gameOverSound;
+    public AudioSource BackSound;
     
 
     //private void Update()
@@ -56,6 +59,9 @@ public class Timer : MonoBehaviour
         gameOverLable.SetActive(true);
         Player.SetActive(false);
         Spawner.SetActive(false);
+        BackSound.Stop();
+        gameOverSound.Play();
+
        
     }
 }

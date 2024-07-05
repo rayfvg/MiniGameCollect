@@ -35,7 +35,7 @@ public class PlayerGame4 : MonoBehaviour
         }
         else if (collision.gameObject.GetComponent<FruintMoverGame4>())
         {
-            PlayerExp.AddExpValue(0.7f);
+            PlayerExp.AddExpValue(0.4f);
             Destroy(collision.gameObject.GetComponent<FruintMoverGame4>());
         }
     }

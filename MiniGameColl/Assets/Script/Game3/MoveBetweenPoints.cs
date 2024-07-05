@@ -9,6 +9,8 @@ public class MoveBetweenPoints : MonoBehaviour
 
     private Transform targetPoint; // Целевая точка
 
+    public AudioSource Move;
+
     private void Start()
     {
         targetPoint = centerPoint; // Начальная позиция - центральная точка
@@ -22,10 +24,12 @@ public class MoveBetweenPoints : MonoBehaviour
             if (targetPoint == centerPoint)
             {
                 targetPoint = leftPoint;
+                Move.Play();
             }
             else if (targetPoint == rightPoint)
             {
                 targetPoint = centerPoint;
+                Move.Play();
             }
         }
         else if (Input.GetKeyDown(KeyCode.D))
@@ -33,10 +37,12 @@ public class MoveBetweenPoints : MonoBehaviour
             if (targetPoint == centerPoint)
             {
                 targetPoint = rightPoint;
+                Move.Play();
             }
             else if (targetPoint == leftPoint)
             {
                 targetPoint = centerPoint;
+                Move.Play();
             }
         }
 
@@ -49,10 +55,12 @@ public class MoveBetweenPoints : MonoBehaviour
         if (targetPoint == centerPoint)
         {
             targetPoint = rightPoint;
+            Move.Play();
         }
         else if (targetPoint == leftPoint)
         {
             targetPoint = centerPoint;
+            Move.Play();
         }
     }
 
@@ -61,10 +69,12 @@ public class MoveBetweenPoints : MonoBehaviour
         if (targetPoint == centerPoint)
         {
             targetPoint = leftPoint;
+            Move.Play();
         }
         else if (targetPoint == rightPoint)
         {
             targetPoint = centerPoint;
+            Move.Play();
         }
     }
 }

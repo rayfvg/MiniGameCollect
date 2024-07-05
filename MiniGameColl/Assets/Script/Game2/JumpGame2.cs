@@ -20,6 +20,8 @@ public class JumpGame2 : MonoBehaviour
     public Sprite Jump;
     public Sprite Stay;
 
+    public AudioSource JumpSound;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -70,6 +72,7 @@ public class JumpGame2 : MonoBehaviour
     {
         if (isGrounded)
         {
+            JumpSound.Play();
             rander.sprite = Jump;
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             

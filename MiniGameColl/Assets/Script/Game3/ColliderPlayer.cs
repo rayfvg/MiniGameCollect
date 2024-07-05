@@ -10,7 +10,7 @@ public class ColliderPlayer : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<FruinGame3>())
         {
-            player.AddExpValue(0.3f);
+            player.AddExpValue(0.6f);
         }
         else if (collision.gameObject.GetComponent<EnemyGame3>())
         {

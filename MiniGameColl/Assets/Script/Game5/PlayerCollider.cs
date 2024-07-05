@@ -11,7 +11,7 @@ public class PlayerCollider : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<FruintGame5>())
         {
-            playerExp.AddExpValue(0.2f);
+            playerExp.AddExpValue(0.5f);
             Destroy(collision.gameObject.GetComponent<FruintGame5>());
         }
         else if (collision.gameObject.GetComponent<EnemyGame5>())
